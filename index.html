@@ -119,9 +119,9 @@ main section[id]{scroll-margin-top:8px}
 .dot{position:relative;width:8px;height:8px;border-radius:50%;background:#22C55E}
 .dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#22C55E;animation:ping 2s var(--ease) infinite}
 @keyframes ping{75%,100%{transform:scale(2.6);opacity:0}}
-.hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);line-height:1.04;font-weight:700;letter-spacing:-.04em;margin:20px 0 20px}
+.hero h1{font-family:var(--font);font-size:clamp(2.2rem,4vw,3.15rem);line-height:1.12;font-weight:600;letter-spacing:-.022em;margin:20px 0 18px;max-width:18ch}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.lead{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--muted);max-width:52ch}
+.lead{font-size:clamp(1rem,1.4vw,1.15rem);color:var(--muted);max-width:58ch}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .assure{display:flex;flex-wrap:wrap;gap:10px 24px;margin:26px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--muted)}
 .assure li{display:flex;align-items:center;gap:8px}
@@ -640,7 +640,7 @@ dialog{color:var(--text)}
   /* hero */
   .hero{padding:16px 0 36px}
   .hero .wrap{gap:28px}
-  .hero h1{font-size:2.15rem;margin:14px 0 14px}
+  .hero h1{font-size:2.05rem;margin:14px 0 12px;letter-spacing:-.02em}
   .lead{font-size:1rem}
   .ctas{margin-top:22px}
   .ctas .btn{flex:1}
@@ -781,6 +781,8 @@ dialog{color:var(--text)}
 /* slideshow: no horizontal scrollbar from the slide-in animation */
 .ssb{overflow-x:hidden!important;scrollbar-width:none}
 .ssb::-webkit-scrollbar{display:none}
+.lead{text-wrap:pretty}
+@media(max-width:720px){.lead .lb,.lead br.lb{display:none}.hero h1{font-size:1.85rem;font-weight:600;line-height:1.15;max-width:none;margin-bottom:16px}.pill .pw{display:none}.pill{font-size:13px}}
 </style>
 </head>
 <body>
@@ -837,9 +839,9 @@ dialog{color:var(--text)}
 <!-- ===== Hero ===== -->
 <section class="hero" id="top"><div class="wrap">
   <div>
-    <span class="pill in-up"><span class="dot" aria-hidden="true"></span>Available for new projects · Working with clients worldwide</span>
+    <span class="pill in-up"><span class="dot" aria-hidden="true"></span>Available for new projects<span class="pw"> · Working with clients worldwide</span></span>
     <h1 class="in-up d1">POS systems and online stores that help businesses <em>sell more.</em></h1>
-    <p class="lead in-up d2">I'm an independent developer who designs and builds point-of-sale software, e-commerce websites and business dashboards. You work with me directly, from the first call to launch day and beyond.</p>
+    <p class="lead in-up d2">I design and build POS software, online stores and dashboards.<br class="lb"> You work with me directly, from first call to launch.</p>
     <div class="ctas in-up d3">
       <button class="btn p" data-book="hire">Book a free consultation<svg class="ic"><use href="#i-arrow"/></svg></button>
       <button class="btn" data-show>View my projects</button>
